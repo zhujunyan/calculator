@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>
+	<br/>
+	<br/>
+	<br/>
+</p>
+<p id = "demo" align=center>CALC</p>
+<p>
+	<br/>
+	<br/>
+</p>
+<p align=center>
+	<button type="button" onclick="number1()">  1  </button>
+	<button type="button" onclick="number2()">  2  </button>
+	<button type="button" onclick="number3()">  3  </button>
+	<button type="button" onclick="add()">  +  </button>
+</p>
+<p align=center>
+	<button type="button" onclick="number4()">  4  </button>
+	<button type="button" onclick="number5()">  5  </button>
+	<button type="button" onclick="number6()">  6  </button>
+	<button type="button" onclick="reduce()">  -  </button>
+
+</p>
+<p align=center>
+	<button type="button" onclick="number7()">  7  </button>
+	<button type="button" onclick="number8()">  8  </button>
+	<button type="button" onclick="number9()">  9  </button>
+	<button type="button" onclick="multipy()">  *  </button>
+</p>
+<p align=center>
+	<button type="button" onclick="clearMemory()">  c </button>
+	<button type="button" onclick="number0()">  0  </button>
+	<button type="button" onclick="myFunction()">  =  </button>
+	<button type="button" onclick="divide()">  /  </button>
+</p>
+<p id = "message" align=center></p>
+
+
+<script>
+var temp = 0;
+var x = 0;
+var y = 0;
+var operation = 0;    // add: 1, reduce:2, multipy:3, divide:4.
+
+//get number
+function number0()
+{
+	//temp = Math.pow(10,count)*temp + 1;
+	temp = 10 * temp + 0;
+	document.getElementById("demo").innerHTML = "".concat(temp);
+}
+function number1()
+{
+	temp= 10 * temp + 1;
+	document.getElementById("demo").innerHTML = "".concat(temp);
+}
+function number2()
+{
+	temp = 10 * temp + 2;
+	document.getElementById("demo").innerHTML = "".concat(temp);
+}
+function number3()
+{
+	temp = 10 * temp + 3;
+	document.getElementById("demo").innerHTML = "".concat(temp);
+}
+function number4()
+{
+	temp = 10 * temp + 4;
+	document.getElementById("demo").innerHTML = "".concat(temp);
+}
+function number5(){
+	temp = 10 * temp + 5;
+	document.getElementById("demo").innerHTML = "".concat(temp);
+}
+function number6()
+{
+	temp = 10 * temp + 6;
+	//count = count + 1;
+	document.getElementById("demo").innerHTML = "".concat(temp);
+}
+function number7()
+{
+	temp = 10 * temp + 7;
+	document.getElementById("demo").innerHTML = "".concat(temp);
+}
+function number8()
+{
+	temp = 10 * temp + 8;
+	document.getElementById("demo").innerHTML = "".concat(temp);
+
+}
+function number9()
+{
+	temp = 10 * temp + 9;
+	document.getElementById("demo").innerHTML = "".concat(temp);
+}
+
+//operation
+function add()
+{
+	x = temp;
+	temp = 0;
+	operation = 1;
+}
+function reduce()
+{
+	x = temp;
+	temp = 0;
+	operation = 2;
+}
+function multipy()
+{
+	x = temp;
+	temp = 0;
+	operation = 3;
+}
+function divide()
+{
+	x = temp;
+	temp = 0;
+	operation = 4;
+}
+
+function clearMemory()
+{
+	temp = 0;
+	x = 0;
+	y = 0;
+	operation = 0;
+	document.getElementById("demo").innerHTML = "CALC";
+}
+
+function myFunction()
+{
+	y = temp;
+	switch(operation)
+	{
+		case 1: temp = x + y; break;
+		case 2: temp = x - y; break;
+		case 3: temp = x * y; break;
+		case 4: temp = x / y; break;
+		default: temp = -1;   break;
+	}
+	if(-1 == temp)
+	{
+		document.getElementById("message").innerHTML = "please select number.";
+		temp = 0;
+	}
+	else
+		document.getElementById("demo").innerHTML = "".concat(temp);
+	//document.getElementById("demo").innerHTML = "you input number 1";
+}
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>
+	<br/>
+	<br/>
+	<br/>
+</p>
+<p id = "demo" align=center>CALC</p>
+<p>
+	<br/>
+	<br/>
+</p>
+<p align=center>
+	<button type="button" onclick="number1()">  1  </button>
+	<button type="button" onclick="number2()">  2  </button>
+	<button type="button" onclick="number3()">  3  </button>
+	<button type="button" onclick="add()">  +  </button>
+</p>
+<p align=center>
+	<button type="button" onclick="number4()">  4  </button>
+	<button type="button" onclick="number5()">  5  </button>
+	<button type="button" onclick="number6()">  6  </button>
+	<button type="button" onclick="reduce()">  -  </button>
+
+</p>
+<p align=center>
+	<button type="button" onclick="number7()">  7  </button>
+	<button type="button" onclick="number8()">  8  </button>
+	<button type="button" onclick="number9()">  9  </button>
+	<button type="button" onclick="multipy()">  *  </button>
+</p>
+<p align=center>
+	<button type="button" onclick="clearMemory()">  c </button>
+	<button type="button" onclick="number0()">  0  </button>
+	<button type="button" onclick="myFunction()">  =  </button>
+	<button type="button" onclick="divide()">  /  </button>
+</p>
+<p id = "message" align=center></p>
+
+
+<script>
+var temp = 0;
+var x = 0;
+var y = 0;
+var operation = 0;    // add: 1, reduce:2, multipy:3, divide:4.
+
+//get number
+function number0()
+{
+	//temp = Math.pow(10,count)*temp + 1;
+	temp = 10 * temp + 0;
+	document.getElementById("demo").innerHTML = "".concat(temp);
+}
+function number1()
+{
+	temp= 10 * temp + 1;
+	document.getElementById("demo").innerHTML = "".concat(temp);
+}
+function number2()
+{
+	temp = 10 * temp + 2;
+	document.getElementById("demo").innerHTML = "".concat(temp);
+}
+function number3()
+{
+	temp = 10 * temp + 3;
+	document.getElementById("demo").innerHTML = "".concat(temp);
+}
+function number4()
+{
+	temp = 10 * temp + 4;
+	document.getElementById("demo").innerHTML = "".concat(temp);
+}
+function number5(){
+	temp = 10 * temp + 5;
+	document.getElementById("demo").innerHTML = "".concat(temp);
+}
+function number6()
+{
+	temp = 10 * temp + 6;
+	//count = count + 1;
+	document.getElementById("demo").innerHTML = "".concat(temp);
+}
+function number7()
+{
+	temp = 10 * temp + 7;
+	document.getElementById("demo").innerHTML = "".concat(temp);
+}
+function number8()
+{
+	temp = 10 * temp + 8;
+	document.getElementById("demo").innerHTML = "".concat(temp);
+
+}
+function number9()
+{
+	temp = 10 * temp + 9;
+	document.getElementById("demo").innerHTML = "".concat(temp);
+}
+
+//operation
+function add()
+{
+	x = temp;
+	temp = 0;
+	operation = 1;
+}
+function reduce()
+{
+	x = temp;
+	temp = 0;
+	operation = 2;
+}
+function multipy()
+{
+	x = temp;
+	temp = 0;
+	operation = 3;
+}
+function divide()
+{
+	x = temp;
+	temp = 0;
+	operation = 4;
+}
+
+function clearMemory()
+{
+	temp = 0;
+	x = 0;
+	y = 0;
+	operation = 0;
+	document.getElementById("demo").innerHTML = "CALC";
+}
+
+function myFunction()
+{
+	y = temp;
+	switch(operation)
+	{
+		case 1: temp = x + y; break;
+		case 2: temp = x - y; break;
+		case 3: temp = x * y; break;
+		case 4: temp = x / y; break;
+		default: temp = -1;   break;
+	}
+	if(-1 == temp)
+	{
+		document.getElementById("message").innerHTML = "please select number.";
+		temp = 0;
+	}
+	else
+		document.getElementById("demo").innerHTML = "".concat(temp);
+	//document.getElementById("demo").innerHTML = "you input number 1";
+}
+</script>
+
+</body>
+</html>
